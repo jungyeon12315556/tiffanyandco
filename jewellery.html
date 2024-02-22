@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+    <!-- swiper slide-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/f1e3afabbc.js" crossorigin="anonymous"></script>
+    <!-- css-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="jewellery.css">
+    <!-- js -->
+    <script src="common.js"></script>
+    <title>TiffanyAndCo</title>
+</head>
+
+<body>
+    <header>
+        <div class="main_header">
+            <div class="main_hidden">
+                <!-- 처음상단에 붙어있는 아이콘 및 메인로고 / 모바일 상단바-->
+                <div class="row2">
+                    <div class="head_flex">
+                        <div class="head_left">
+                            <button class="hidden_list" onclick="openNav()"><i class="fa-solid fa-bars fa-lg"style="color: #000000;"></i></button>
+                            <button class="search_btn2" id="go-top"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></button>
+                            <button class="pop"><a href="map.html#"><i class="fa-solid fa-location-dot fa-lg"  style="color: #000000;"></i></a></button>
+                        </div>
+                        <div class="head_mid"><a href="index.html#"><img src="img/logo.svg" alt=""></a></div>
+                        <div class="head_right">
+                            <button onclick="openSide()" class="service"><i class="fa-solid fa-phone fa-lg" style="color: #000000;"></i></button>
+                            <button class="user_icon"><a href="user_login.html#"><i class="fa-solid fa-user fa-lg"  style="color: #000000;"></i></a></button>
+                            <button class="shoppinglist"><a href="shoppinglist.html#"><i class="fa-solid fa-bag-shopping fa-lg"  style="color: #000000;"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 스크롤시 상단에 고정되는 상단바 -->
+                <nav>
+                    <div class="main_nav">
+                        <!-- 왼쪽에 위치한 아이콘들 -->
+                        <div class="head_left2">
+                            <button class="search_btn2" id="go-top2"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></button>
+                            <button class="pop"><a href="map.html#"><i class="fa-solid fa-location-dot fa-lg"  style="color: #000000;"></i></button>
+
+                        </div>
+                        <!-- 중간에 위치한 메뉴바 -->
+                        <div class="navbar" id="myNav">
+                            <a href="javascript:void(0)" class="closebtn">&times;</a>
+                            <div class="dropdown">
+                                <button class="dropbtn">하이주얼리</button>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="column">
+                                            <h3>블루 북</h3>
+                                            <a href="jewellery.html#">블루 북 전체 보기</a>
+                                            <a href="jewellery.html#">쉘 네크리스</a>
+                                            <a href="jewellery.html#">젤리피쉬 브로치</a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>티파니 셀렉션</h3>
+                                            <a href="jewellery.html#">블루 북 전체 보기</a>
+                                            <a href="jewellery.html#">쉘 네크리스</a>
+                                            <a href="jewellery.html#">젤리피쉬 브로치</a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>쟌 슐럼버제</h3>
+                                            <a href="jewellery.html#">블루 북 전체 보기</a>
+                                            <a href="jewellery.html#">쉘 네크리스</a>
+                                            <a href="jewellery.html#">젤리피쉬 브로치</a>
+                                        </div>
+                                        <div class="hiddenbox_right"> <img src="img/2023-Nav-HJ-1x1-E.jpg" alt="">
+                                            <p>블루북<span style="background-color:#f4f0ea; padding:3px;"><b>NEW</b></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">주얼리</button>
+                                <div class="dropdown-content">
+
+                                    <div class="row">
+                                        <div class="column">
+                                            <h3>카테고리</h3>
+                                            <a href="jewellery.html#">네크리스 및 펜던트</a>
+                                            <a href="jewellery.html#">이어링</a>
+                                            <a href="jewellery.html#">브레이슬릿</a>
+                                            <a href="jewellery.html#">링</a>
+                                            <a href="jewellery.html#">브로치</a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>아이콘 컬렉션</h3>
+                                            <a href="jewellery.html#">티파니 락 <span
+                                                    style="background-color:#f4f0ea; padding:3px;"><b>NEW</b></span></a>
+                                            <a href="jewellery.html#">티파니 T</a>
+                                            <a href="jewellery.html#">티파니 하드웨어</a>
+                                            <a href="jewellery.html#">티파니 노트</a>
+                                            <a href="jewellery.html#">티파니 빅토리아™</a>
+                                            <a href="jewellery.html#">리턴 투 티파니™</a>
+                                            <a href="jewellery.html#">엘사 퍼레티™</a>
+                                            <a href="jewellery.html#">Jean Schlumberger by Tiffany&amp;Co.™</a>
+                                            <a href="jewellery.html#">팔로마 피카소™</a>
+
+
+                                        </div>
+                                        <div class="column">
+                                            <h3>티파니 셀렉션</h3>
+                                            <a href="jewellery.html#">티파니 신제품</a>
+                                            <a href="jewellery.html#">가장 인기 있는 주얼리</a>
+                                            <a href="jewellery.html#">온라인 익스클루시브</a>
+                                        </div>
+                                        <div class="column_flex">
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/락.jpg" alt=""></div>
+                                                <p>락</p>
+                                            </div>
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/노트.jpg" alt=""></div>
+                                                <p>노트</p>
+                                            </div>
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/하드웨어.jpg" alt=""></div>
+                                                <p>하드웨어</p>
+                                            </div>
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/T.jpg" alt=""></div>
+                                                <p>T</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">커플 &amp; 웨딩 링 </button>
+                                <div class="dropdown-content">
+
+                                    <div class="row">
+                                        <div class="column">
+                                            <h3>카테고리</h3>
+                                            <a href="jewellery.html#">웨딩 링</a>
+                                            <a href="jewellery.html#">웨딩 밴드 세트</a>
+                                            <a href="jewellery.html#">커플링</a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>웨딩 링 컬렉션</h3>
+                                            <a href="jewellery.html#">티파니™ 세팅</a>
+                                            <a href="jewellery.html#">티파니 트루</a>
+                                            <a href="jewellery.html#">티파니 하모니®</a>
+                                            <a href="jewellery.html#">티파니 솔리스트</a>
+                                            <a href="jewellery.html#">티파니 노보™</a>
+                                            <a href="jewellery.html#">티파니앤코 슐럼버제™ 웨딩 링 </a>
+                                            <a href="jewellery.html#">티파니 투게더 웨딩 밴드 세트 </a>
+                                            <a href="jewellery.html#">티파니 포에버 웨딩 밴드 세트 </a>
+                                            <a href="jewellery.html#">T&amp;CO.™ </a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>티파니만의 특별함</h3>
+                                            <a href="jewellery.html#">다이아몬드 가이드</a>
+                                            <a href="jewellery.html#">평생 서비스</a>
+                                            <a href="jewellery.html#">다이아몬드 소싱</a>
+                                        </div>
+                                        <div class="column_flex">
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/티파니웨딩링.jpg" alt=""></div>
+                                                <p>티파니 웨딩 링</p>
+                                            </div>
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/탁월한 품질.jpg" alt=""></div>
+                                                <p>탁월한 품질</p>
+                                            </div>
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/다이아몬드가이드.jpg" alt=""></div>
+                                                <p>다이아몬드 가이드</p>
+                                            </div>
+                                            <div class="column_box">
+                                                <div class="column_picture"><img src="img/평생서비스.jpg" alt=""></div>
+                                                <p>평생 서비스</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">위치</button>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="column">
+                                            <h3>카테고리</h3>
+                                            <a href="jewellery.html#">여성용</a>
+                                            <a href="jewellery.html#">남성용</a>
+                                            <a href="jewellery.html#">워치 전체 보기</a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>아이콘 컬렉션</h3>
+                                            <a href="jewellery.html#">아틀라스™</a>
+                                            <a href="jewellery.html#">티파니 이터니티</a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>티파니 셀렉션</h3>
+                                            <a href="jewellery.html#">다이아몬드 워치</a>
+                                            <a href="jewellery.html#">티파니 블루 워치</a>
+
+                                        </div>
+                                        <div class="hiddenbox_right"> <img src="img/워치.jpg" alt="">
+                                            <p>다이아몬드 워치</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">홈 &amp;액세서리</button>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="column">
+                                            <h3>홈</h3>
+                                            <a href="jewellery.html#">테이블웨어</a>
+                                            <a href="jewellery.html#">데코</a>
+                                            <a href="jewellery.html#">베이비</a>
+                                            <a href="jewellery.html#">홈 전체 보기</a>
+
+
+                                        </div>
+                                        <div class="column">
+                                            <h3>가죽 &amp; 액세서리</h3>
+                                            <a href="jewellery.html#">가죽 제품</a>
+                                            <a href="jewellery.html#">스카프 &amp; 스톨</a>
+                                            <a href="jewellery.html#">아이웨어</a>
+                                            <a href="jewellery.html#">키링</a>
+                                            <a href="jewellery.html#">향수</a>
+                                            <a href="jewellery.html#">액세서리 전체 보기</a>
+
+                                        </div>
+                                        <div class="column">
+                                            <h3>티파니 셀렉션</h3>
+                                            <a href="jewellery.html#">홈 &amp; 액세서리 신제품</a>
+                                            <a href="jewellery.html#">집들이 기프트</a>
+                                        </div>
+                                        <div class="hiddenbox_right"> <img src="img/티파니테이블.jpg" alt="">
+                                            <p>티파니 테이블</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">기프트</button>
+                                <div class="dropdown-content">
+                                    <div class="row">
+                                        <div class="column">
+                                            <h3>기프트</h3>
+                                            <a href="jewellery.html#">여성</a>
+                                            <a href="jewellery.html#">남성</a>
+                                            <a href="jewellery.html#">베이비</a>
+                                            <a href="jewellery.html#">홈</a>
+                                            <a href="jewellery.html#">커플</a>
+                                            <a href="jewellery.html#">기프트 전체 보기</a>
+                                        </div>
+                                        <div class="column">
+                                            <h3>티파니 셀렉션</h3>
+                                            <a href="jewellery.html#">티파니 블루™ 기프트</a>
+                                            <a href="jewellery.html#">웨딩 기프트</a>
+                                            <a href="jewellery.html#">온라인 익스클루시브</a>
+                                            <a href="jewellery.html#">홀리데이 기프트 <span
+                                                    style="background-color:#f4f0ea; padding:3px;"><b>NEW</b></span></a>
+                                            <a href="jewellery.html#">200만원 이하의 기프트 <span
+                                                    style="background-color:#f4f0ea; padding:3px;"><b>NEW</b></span></a>
+
+
+                                        </div>
+                                        <div class="hiddenbox_right"> <img src="img/기프트.jpg" alt="">
+                                            <p>그녀를 위한 기프트</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn"><span class="font_active1">World of Tiffany</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 오른쪽에 위치한 아이콘들 -->
+                        <div class="head_right2">
+                            <button onclick="openSide()"><i class="fa-solid fa-phone fa-lg" style="color: #000000;"></i></button>
+                            <button><a href="user_login.html#"><i class="fa-solid fa-user fa-lg"  style="color: #000000;"></i></a></button>
+                            <button><a href="shoppinglist.html#"><i class="fa-solid fa-bag-shopping fa-lg"  style="color: #000000;"></i></a></button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- 서치아이콘 클릭시 나오는 상단내용 -->
+        <div id="open_search" style="display: none;">
+            <div class="search">
+                <form action="#" method="get" id="searchFrm">
+                    <fieldset>
+                        <img src="img/search.png" alt="">
+                        <input type="search" name="search_txt" autofocus="" placeholder="검색어를 입력해주세요">
+                    </fieldset>
+                </form>
+                <a href="#" class="search_btn">검색</a>
+            </div>
+            <div class="search_list">
+                <p>인기 키워드 :</p>
+                <div class="list_txt">
+                    <a href="#">1837</a>
+                    <a href="#">밀그레인</a>
+                    <a href="#">return to tiffany heart pendant</a>
+                    <a href="#">오픈 하트</a>
+                    <a href="#">리턴투티파니</a>
+                </div>
+            </div>
+            <a href="#" class="search_close"><img src="img/up_close.png" alt=""></a>
+        </div>
+        <!-- 서치아이콘 클릭시 움직이는 동작 -->
+        <script src="search.js"></script>
+        <!-- user_icon 클릭시 나오는 내용 -->
+        <div id="mySideservice" class="sideservice">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
+            <h1>고객 서비스</h1>
+            <div class="sideservice_picture"><img src="img/service.jpg" alt=""></div>
+            <p>티파니는 고객님의 작은 질문까지도 함께 고민해 도움을 드립니다. 웨딩 링 또는 기프트를 선택하는 것부터 매장 및 온라인 상담까지 다양한 서비스를 제공합니다.</p>
+
+            <p>고객 센터 운영 시간:<br>
+                월-일: 10:30-19:30 점심시간: 12-13시<br>
+                (1월 1일, 설날 및 추석 전일 및 당일 휴무)</p>
+
+        </div>
+        <script>
+            function openSide() {
+                document.getElementById("mySideservice").style.width = "100%";
+
+            }
+            function closeSide() {
+                document.getElementById("mySideservice").style.width = "0";
+
+            }
+        </script>
+
+        <!-- 모바일버전일시 메뉴바 내용 -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <ul class="sidebar_lists">
+                <li class="sidebar_li">
+                    <h3 class="sidebar_title">하이주얼리</h3>
+                    <ul class="sidebar_list">
+                        <li class="sidebar_li2"><a href="jewellery.html#">블루 북</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">티파니 셀렉션</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">쟌 슐럼버제</a></li>
+
+
+                    </ul>
+                </li>
+                <li class="sidebar_li">
+                    <h3 class="sidebar_title">주얼리</h3>
+                    <ul class="sidebar_list">
+                        <li class="sidebar_li2"><a href="jewellery.html#">카테고리</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">아이콘 컬렉션</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">티파니 셀렉션</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar_li">
+                    <h3 class="sidebar_title">커플 &amp; 웨딩 링</h3>
+                    <ul class="sidebar_list">
+                        <li class="sidebar_li2"><a href="jewellery.html#">카테고리</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">웨딩 링 컬렉션</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">티파니만의 특별함</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar_li">
+                    <h3 class="sidebar_title">위치</h3>
+                    <ul class="sidebar_list">
+                        <li class="sidebar_li2"><a href="jewellery.html#">카테고리</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">아이콘 컬렉션</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">티파니 셀렉션</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar_li">
+                    <h3 class="sidebar_title">홈 &amp;액세서리</h3>
+                    <ul class="sidebar_list">
+                        <li class="sidebar_li2"><a href="jewellery.html#">홈</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">가죽 &amp; 액세서리</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">티파니 셀렉션</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar_li">
+                    <h3 class="sidebar_title">기프트</h3>
+                    <ul class="sidebar_list">
+                        <li class="sidebar_li2"><a href="jewellery.html#">기프트</a></li>
+                        <li class="sidebar_li2"><a href="jewellery.html#">티파니 셀렉션</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar_li">
+                    <h3 class="sidebar_title"><span class="font_active1">World of Tiffany</span></h3>
+
+                </li>
+            </ul>
+            <a href="index.html" class="footer2_mid"><img src="img/Untitled-1.png" alt=""></a>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "100%";
+
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+
+            }
+
+
+        </script>
+    </header>
+    <container>
+        <div class=list_header>
+            <div class="sort-form">
+                <form action="action.php">
+
+                    <select name="sort" id="sort-form" placeholder="정렬기준">
+                        <option value="recommendation">추천순</option>
+                        <option value="new">티파니 신제품</option>
+                        <option value="price-highest">높은 가격순</option>
+                        <option value="price-lowest">낮은 가격순</option>
+                    </select>
+                </form>
+            </div>
+            <div class="list_header title">
+                <h1>주얼리</h1>
+            </div>
+            <div class="filter"><button class="filter-btn">필터 <img src="img/filter_list_icon.svg" alt=""></button></div>
+
+        </div>
+        <div class="list_flex">
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리1.jpg" alt="">
+                    <img src="img/쥬얼리1-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1 font_active1">Tiffany T</p>
+                    <P>T1 힌지드 뱅글, 로즈 골드, 다이아몬드 세팅, 네로우</P>
+                    <P>21,050,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리2.jpg" alt="">
+                    <img src="img/쥬얼리2-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1 font_active1">Tiffany T</p>
+                    <P>T1 링, 로즈 골드, 2.5mm</P>
+                    <P>2,000,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리3.jpg" alt="">
+                    <img src="img/쥬얼리3-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1 font_active1">Tiffany T</p>
+                    <P>스마일 펜던트, 로즈 골드, 스몰</P>
+                    <P>1,700,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리4.jpg" alt="">
+                    <img src="img/쥬얼리4-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1 font_active1">Tiffany T</p>
+                    <P>스마일 이어링</P>
+                    <P>3,780,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리5.jpg" alt="">
+                    <img src="img/쥬얼리5-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1">티파니 락</p>
+                    <P>T1 힌지드 뱅글, 로즈 골드, 다이아몬드 세팅, 네로우</P>
+                    <P>21,050,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리6.jpg" alt="">
+                    <img src="img/쥬얼리6-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1">티파니 락</p>
+                    <P>T1 힌지드 뱅글, 로즈 골드, 다이아몬드 세팅, 네로우</P>
+                    <P>21,050,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리1.jpg" alt="">
+                    <img src="img/쥬얼리1-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1">티파니 락</p>
+                    <P>T1 힌지드 뱅글, 로즈 골드, 다이아몬드 세팅, 네로우</P>
+                    <P>21,050,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리1.jpg" alt="">
+                    <img src="img/쥬얼리1-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1">티파니 락</p>
+                    <P>T1 힌지드 뱅글, 로즈 골드, 다이아몬드 세팅, 네로우</P>
+                    <P>21,050,000원</P>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="list-picture"><img src="img/쥬얼리1.jpg" alt="">
+                    <img src="img/쥬얼리1-1.jpg" alt="">
+                </div>
+                <div class="list-txt">
+                    <p class="list-txt1">티파니 락</p>
+                    <P>T1 힌지드 뱅글, 로즈 골드, 다이아몬드 세팅, 네로우</P>
+                    <P>21,050,000원</P>
+                </div>
+            </div>
+        </div>
+    </container>
+    <footer>
+        <div class="footer_content">
+            <ul class="footer_lists">
+                <li class="footer_li">
+                    <h3 class="footer_title">고객지원</h3>
+                    <ul class="footer_list">
+                        <li class="footer_li2"><a href="#">주문조회</a></li>
+                        <li class="footer_li2"><a href="#">문의하기</a></li>
+                        <li class="footer_li2"><a href="#">자주 묻는 질문</a></li>
+                        <li class="footer_li2"><a href="#">배송/교환/반품</a></li>
+                        <li class="footer_li2"><a href="#">매장 찾기</a></li>
+                        <li class="footer_li2"><a href="#">사이트맵</a></li>
+
+                    </ul>
+                </li>
+                <li class="footer_li">
+                    <h3 class="footer_title">서비스</h3>
+                    <ul class="footer_list">
+                        <li class="footer_li2"><a href="#">관리 및 수리</a></li>
+                        <li class="footer_li2"><a href="#">상담 예약하기</a></li>
+                        <li class="footer_li2"><a href="#">퍼스널 서비스</a></li>
+                    </ul>
+                </li>
+                <li class="footer_li">
+                    <h3 class="footer_title">티파니앤코 소개</h3>
+                    <ul class="footer_list">
+                        <li class="footer_li2"><a href="#">지속 가능 경영</a></li>
+                        <li class="footer_li2"><a href="#">티파니 재단</a></li>
+                        <li class="footer_li2"><a href="#">티파니 채용</a></li>
+                        <li class="footer_li2"><a href="#">최신 뉴스</a></li>
+                    </ul>
+                </li>
+                <li class="footer_li">
+                    <h3 class="footer_title">이용약관 및 법적고지</h3>
+                    <ul class="footer_list">
+                        <li class="footer_li2"><a href="#"><b>개인정보처리방침</b></a></li>
+                        <li class="footer_li2"><a href="#">이용약관</a></li>
+                        <li class="footer_li2"><a href="#">웹사이트 정책</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer2">
+                <div class="footer_flex">
+                    <div class="footer2_left">
+                        <p><span style="color: #ccc;">T&amp;Co. 2023</span>
+                            국가/지역: 대한민국</p>
+                    </div>
+                    <div class="footer2_mid"><img src="img/Untitled-1.png" alt=""></div>
+                    <div class="footer2_right">
+                        <ul>
+                            <li class="foot2_sns"><a href="">인스타그램</a></li>
+                            <li class="foot2_sns"><a href="">카카오톡</a></li>
+                            <li class="foot2_sns"><a href="">트위터</a></li>
+                            <li class="foot2_sns"><a href="">페이스북</a></li>
+                            <li class="foot2_sns"><a href="">유튜브</a></li>
+                            <li class="foot2_sns"><a href="">핀터레스트</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="footer3">(주)티파니코리아｜대표자: 뤽세이어 서울특별시 중구 청계천로 100 시그니쳐타워 17층｜사업자 등록번호: 106-81-59905｜통신판매자신고번호:
+                2023-서울중구-1323｜호스팅서비스: Tiffany &amp; Co. 고객센터: 1670-1837｜이메일: clientcare.kr@tiffany.com</p>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

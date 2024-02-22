@@ -1,0 +1,109 @@
+.list_header{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.sort-form{
+    align-self: flex-end;
+    margin-left: 10px;
+}
+.filter{
+    margin-right: 10px;
+    align-self: flex-end;
+}
+.list_header .sort-form #sort-form{
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+}
+.list_header .sort-form #sort-form option{
+    font-size: 1.2rem;
+}
+.list_header .title h1{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 3rem;
+}
+.filter-btn{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000;
+    font-size: 1.1rem;
+}
+.filter-btn img{
+    width: 15px;
+    height: 15px;
+}
+.list_flex{
+    display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   margin: 50px 0;
+    
+}
+.list-box{
+    width: 30%;
+    transition: 0.5s;
+    /* display: flex;
+    flex-wrap: wrap; */
+    cursor: pointer;
+}
+.list-picture{
+    width: 100%;
+}
+.list-box img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    
+}
+.list-box img:last-child{
+    display: none;
+}
+.list-box:hover img:first-child{
+    display: none;
+}
+.list-box:hover img:last-child{
+    display: block;
+}
+.list-txt{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.list-txt1{
+    font-size: 1.5rem;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+@media(max-width:720px){
+    .filter-btn{
+        width: 20vw;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .list-box{
+        width: 45%;
+        
+    }
+    .list_header .sort-form #sort-form{
+        width: 20vw;
+        height: 30px;
+        
+    }
+    .list-txt1{
+        font-size: 1.3rem;
+        
+    }
+    .list_header{
+        align-self: flex-start;
+    }
+    .list_header .title h1{
+        font-size: 1.8rem;
+    }
+    .list_header .sort-form #sort-form option{
+        font-size: 5vw;
+    }
+    
+}
